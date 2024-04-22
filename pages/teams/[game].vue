@@ -1,64 +1,42 @@
 <script setup lang="ts">
+import { useInfosStore } from '@/stores/infos'
 import { useRoute } from 'vue-router';
-
-const teams = [
-    { 'name': 'Valorant', 'link': 'valorant', 'image': 'https://cdn.icon-icons.com/icons2/3660/PNG/512/valorant_logo_play_riot_games_icon_228477.png' },
-    { 'name': 'Valorant Academy', 'link': 'valorant-academy', 'image': 'https://cdn.icon-icons.com/icons2/3660/PNG/512/valorant_logo_play_riot_games_icon_228477.png' },
-    { 'name': 'Rainbow Six Siege', 'link': 'r6siege', 'image': 'https://image.api.playstation.com/cdn/EP0001/CUSA01788_00/tCPL6bpXl4FhvK4mr19Rh5qJu4QJrfTK.png?w=440&thumb=false' },
-]
 
 const route = useRoute()
 
-console.log(route.params.game)
+const teams = useInfosStore().teams
+const line = useInfosStore().chooseTeam(route.params.game)[0]
 </script>
 
 <template>
+    <Title>{{ line.game }} - Stellae</Title>
+
     <div class="min-h-screen py-24 px-6 bg-teams text-white">
         <div>
-            <div class="flex gap-10 pb-14">
+            <div class="flex gap-10 pb-8 lg:pb-14 overflow-x-auto hide-scrollbar">
                 <p v-for="team in teams" :class="{ 'text-cyan-300': route.params.game == team.link }"
-                    class="font-bold text-xl">{{ team.name }}</p>
+                    class="font-bold text-xl flex-shrink-0">{{ team.name }}</p>
             </div>
 
             <div>
-                <p class="text-4xl font-bold mb-4 text-cyan-300">{{ route.params.game }}</p>
+                <p class="text-4xl lg:text-5xl font-bold mb-4 text-cyan-300">{{ line.game }}</p>
 
-                <div class="flex gap-5">
-                    <div>
-                        <img src="https://pbs.twimg.com/media/GK9hEZbWEAIi0yP?format=jpg&name=large"
+                <div class="grid grid-cols-2 lg:flex gap-5">
+                    <div v-for="player in line.players" :key="player.name">
+                        <img :src="player.image"
                             class="h-80 w-56 object-cover rounded-md" lt="">
-                        <p>Nick</p>
-                        <p>Nome</p>
-                    </div>
-
-                    <div>
-                        <img src="https://pbs.twimg.com/media/GK9hEZbWEAIi0yP?format=jpg&name=large"
-                            class="h-80 w-56 object-cover rounded-md" lt="">
-                        <p>Nick</p>
-                        <p>Nome</p>
-                    </div>
-
-                    <div>
-                        <img src="https://pbs.twimg.com/media/GK9hEZbWEAIi0yP?format=jpg&name=large"
-                            class="h-80 w-56 object-cover rounded-md" lt="">
-                        <p>Nick</p>
-                        <p>Nome</p>
-                    </div>
-
-                    <div>
-                        <img src="https://pbs.twimg.com/media/GK9hEZbWEAIi0yP?format=jpg&name=large"
-                            class="h-80 w-56 object-cover rounded-md" lt="">
-                        <p>Nick</p>
-                        <p>Nome</p>
-                    </div>
-
-                    <div>
-                        <img src="https://pbs.twimg.com/media/GK9hEZbWEAIi0yP?format=jpg&name=large"
-                            class="h-80 w-56 object-cover rounded-md" lt="">
-                        <p>Nick</p>
-                        <p>Nome</p>
+                        <p>{{ player.nick }}</p>
+                        <p>{{ player.name }}</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-2 px-6 bg-cyan-300">
+        <div class="flex justify-center gap-2 lg:gap-14">
+            <div v-for="sponsor in line.sponsor" :key="sponsor.name">
+                <img :src="sponsor.logo" class="max-w-48 h-14 lg:h-20 object-cover" alt="" srcset="">
             </div>
         </div>
     </div>
