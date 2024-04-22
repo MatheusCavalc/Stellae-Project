@@ -25,7 +25,7 @@ const line = useInfosStore().chooseTeam(route.params.game)[0]
                     <div class="grid grid-cols-2 lg:flex gap-5">
                         <div v-for="player in line.players" :key="player.name">
                             <img :src="player.image" class="h-80 w-56 object-cover rounded-md" lt="">
-                            <p>{{ player.nick }}</p>
+                            <p class="font-bold uppercase">{{ player.nick }}</p>
                             <p>{{ player.name }}</p>
                         </div>
                     </div>

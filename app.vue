@@ -3,6 +3,10 @@
 </template>
 
 <style>
+:root {
+  font-family: IntegralCF,sans-serif;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
