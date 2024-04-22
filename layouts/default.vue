@@ -52,7 +52,6 @@
                         </svg>
                         <span class="sr-only">Gmail</span>
                     </a>
-
                 </div>
             </div>
         </div>

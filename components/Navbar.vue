@@ -33,9 +33,7 @@ onBeforeUnmount(() => {
             </NuxtLink>
             <div class="flex lg:order-2">
                 <a href="https://www.instagram.com/store.lostlight/" target="_blank">
-                    <button
-                        class="px-4 py-2 mr-1 text-sm font-medium text-center text-black bg-gradient-to-r from-white to-cyan-300 lg:border lg:border-black rounded-lg lg:px-4 lg:mr-0 transition duration-700 ease-in-out">Confira
-                        Mais</button>
+                    <Links />
                 </a>
                 <button @click="menu = !menu"
                     :class="{ 'line-color-black': isNavbarOpaque, 'line-color-white': !isNavbarOpaque, 'opened': menu }"

@@ -94,6 +94,25 @@ export const useInfosStore = defineStore('infos', () => {
         }
     ];
 
+    const sponsors = [
+        {
+            'name': 'Neverest',
+            'logo': NeverestLogo,
+            'link': 'https://neverest.gg/'
+        },
+        {
+            'name': 'Inpower',
+            'logo': InpowerLogo,
+            'link': 'https://www.inpower.com.br/'
+        },
+        {
+            'name': 'Reload',
+            'logo': ReloadLogo,
+            'link': ''
+        }
+
+    ]
+
     function chooseTeam(team: any) {
         return lines.filter(line => line.link === team);
     }
@@ -101,6 +120,7 @@ export const useInfosStore = defineStore('infos', () => {
     return {
         teams,
         lines,
+        sponsors,
 
         chooseTeam
     }
