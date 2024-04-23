@@ -12,7 +12,7 @@ const sponsors = useInfosStore().sponsors
         <div class="min-h-screen image-home bg-center bg-cover"></div>
 
         <div class="px-4 py-10">
-            <p class="text-left lg:text-center text-3xl italic lg:text-4xl font-bold mb-8">
+            <p class="text-left lg:text-center text-3xl italic lg:not-italic lg:uppercase lg:text-4xl font-extrabold mb-8">
                 Nossos produtos
             </p>
 
@@ -27,10 +27,10 @@ const sponsors = useInfosStore().sponsors
             </div>
         </div>
 
-        <div class="py-10 px-6 bg-cyan-300">
+        <div class="py-10 px-6 bg-gradient-to-r from-cyan-300 via-cyan-300 to-white">
             <div class="flex justify-center gap-2 lg:gap-14">
                 <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link" target="_blank">
-                    <div class="hover:scale-110 transition duration-300">
+                    <div class="transition duration-300 hover:scale-125">
                         <img :src="sponsor.logo" class="max-w-48 h-14 lg:h-20 object-cover" alt="" srcset="">
                     </div>
                 </a>

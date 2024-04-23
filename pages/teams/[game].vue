@@ -12,15 +12,15 @@ const line = useInfosStore().chooseTeam(route.params.game)[0]
     <NuxtLayout>
         <Title>{{ line.game }} - Stellae</Title>
 
-        <div class="min-h-screen py-24 px-6 bg-teams text-white">
+        <div class="min-h-screen py-28 px-6 bg-teams text-white">
             <div>
                 <div class="flex gap-10 pb-8 lg:pb-14 overflow-x-auto hide-scrollbar">
                     <p v-for="team in teams" :class="{ 'text-cyan-300': route.params.game == team.link }"
-                        class="font-bold text-xl flex-shrink-0">{{ team.name }}</p>
+                        class="font-bold uppercase flex-shrink-0">{{ team.name }}</p>
                 </div>
 
                 <div>
-                    <p class="text-4xl lg:text-5xl font-bold mb-4 text-cyan-300">{{ line.game }}</p>
+                    <p class="text-4xl lg:text-4xl uppercase font-bold mb-4 text-cyan-300">{{ line.game }}</p>
 
                     <div class="grid grid-cols-2 lg:flex gap-5">
                         <div v-for="player in line.players" :key="player.name">

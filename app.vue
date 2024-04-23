@@ -4,7 +4,7 @@
 
 <style>
 :root {
-  font-family: IntegralCF,sans-serif;
+  font-family: IntegralCF, sans-serif;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
