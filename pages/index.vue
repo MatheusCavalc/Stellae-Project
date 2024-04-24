@@ -9,10 +9,10 @@ const sponsors = useInfosStore().sponsors
 <template>
     <NuxtLayout>
         <Title>Stellae Gaming</Title>
-        <div class="min-h-screen image-home bg-center bg-cover"></div>
+        <Carousel />
 
         <div class="px-4 py-10">
-            <p class="text-left lg:text-center text-3xl italic lg:not-italic lg:uppercase lg:text-4xl font-extrabold mb-8">
+            <p class="text-left lg:text-center text-3xl italic lg:not-italic uppercase lg:text-4xl font-extrabold mb-8">
                 Nossos produtos
             </p>
 

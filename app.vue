@@ -1,10 +1,14 @@
-<template>  
-    <NuxtPage />
+<template>
+  <NuxtPage />
 </template>
 
 <style>
-:root {
-  font-family: IntegralCF, sans-serif;
+body {
+  font-family: "IntegralCF", sans-serif;
+}
+
+.text-secondary {
+  font-family: "Neuwelt", sans-serif;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

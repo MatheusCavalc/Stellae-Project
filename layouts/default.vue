@@ -8,7 +8,7 @@
         <slot /> 
     </div>
 
-    <footer class="bg-black text-white">
+    <footer class="bg-black text-white text-secondary">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="lg:flex lg:justify-between">
                 <div class="mb-6 lg:mb-0">

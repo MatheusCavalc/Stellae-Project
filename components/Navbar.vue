@@ -23,13 +23,13 @@ onBeforeUnmount(() => {
 
 <template>
     <nav :class="{ 'border-b border-b-black bg-black': isNavbarOpaque }"
-        class="fixed top-0 z-10 w-full transition duration-700 ease-in-out">
+        class="fixed top-0 z-30 w-full transition duration-700 ease-in-out">
         <div class="flex flex-wrap items-center justify-between max-w-screen-2xl px-1 lg:px-4 py-3 lg:py-0 mx-auto">
             <NuxtLink to="/"
                 class="flex items-center gap-1 transition duration-700 ease-in-out text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-300">
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
                 <span
-                    class="self-center text-xl font-semibold lg:text-2xl whitespace-nowrap traced-black">Stellae</span>
+                    class="self-center text-xl font-semibold lg:text-2xl whitespace-nowrap traced-black text-secondary">Stellae</span>
             </NuxtLink>
             <div class="flex lg:order-2">
                 <a href="https://www.instagram.com/store.lostlight/" target="_blank">
