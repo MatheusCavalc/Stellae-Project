@@ -2,14 +2,29 @@
 import MenuIcon from '@/components/Icons/MenuIcon.vue';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
-let menu = ref(false)
+const menu = ref(false)
 const teamsMenu = ref(false)
+
+const isHidden = ref(false);
+let lastScrollTop = 0;
 
 const isNavbarOpaque = ref(false);
 
 const handleScroll = () => {
     const scrollThreshold = 100;
     isNavbarOpaque.value = window.scrollY > scrollThreshold;
+
+    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollTop > lastScrollTop) {
+        // Scroll para baixo
+        isHidden.value = true;
+    } else {
+        // Scroll para cima
+        isHidden.value = false;
+    }
+
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
 };
 
 onMounted(() => {
@@ -22,7 +37,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <nav :class="{ 'border-b border-b-black bg-black': isNavbarOpaque }"
+    <nav :class="{ 'border-b border-b-black bg-black': isNavbarOpaque, 'lg:-translate-y-full lg:ease-in': isHidden, 'lg:-translate-y-0 lg:ease-out': !isHidden }"
         class="fixed top-0 z-30 w-full transition duration-700 ease-in-out">
         <div class="flex flex-wrap items-center justify-between max-w-screen-2xl px-1 lg:px-4 py-3 lg:py-0 mx-auto">
             <NuxtLink to="/"
