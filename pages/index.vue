@@ -36,6 +36,8 @@ const sponsors = useInfosStore().sponsors
                 </a>
             </div>
         </div>
+
+        <YoutubeSection />
     </NuxtLayout>
 </template>
 
