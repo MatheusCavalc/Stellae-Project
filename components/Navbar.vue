@@ -27,6 +27,11 @@ const handleScroll = () => {
     lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
 };
 
+const closeMenus = () => {
+    menu.value = !menu.value
+    teamsMenu.value = false
+}
+
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);
 });
@@ -50,7 +55,7 @@ onBeforeUnmount(() => {
                 <a href="https://www.instagram.com/store.lostlight/" target="_blank">
                     <Links />
                 </a>
-                <button @click="menu = !menu"
+                <button @click="closeMenus"
                     :class="{ 'line-color-black': isNavbarOpaque, 'line-color-white': !isNavbarOpaque, 'opened': menu }"
                     class="inline-flex items-center justify-center w-10 h-10 p-1 text-sm rounded-lg lg:hidden transition duration-700 ease-in-out">
                     <MenuIcon />
