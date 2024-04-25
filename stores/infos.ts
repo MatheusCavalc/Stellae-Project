@@ -32,7 +32,7 @@ export const useInfosStore = defineStore('infos', () => {
                     image: "https://static.valorantzone.gg/news/2024/03/06160823/nicksz-stellae-vcb-2024.png"
                 },
                 {
-                    name: "Palla",
+                    name: "Davi Alcides",
                     nick: "Palla",
                     image: "https://pbs.twimg.com/profile_images/1761864973511258112/GWYEcq93_400x400.jpg"
                 },
