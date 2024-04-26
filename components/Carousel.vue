@@ -63,7 +63,8 @@ onMounted(() => {
                                 class="text-3xl mx-5 lg:mx-0 italic font-bold md:text-6xl uppercase text-cyan-300 text-center">
                                 Nosso novo uniforme
                             </p>
-                            <p class="text-white text-center text-sm lg:text-base text-secondary mt-4">Confira nossos produtos e se renda
+                            <p class="text-white text-center text-sm lg:text-base text-secondary mt-4">Confira nossos
+                                produtos e se renda
                                 a
                                 ser Stellae</p>
 
@@ -84,12 +85,12 @@ onMounted(() => {
         <div class="absolute z-20 flex space-x-3 -translate-x-1/2 bottom-8 lg:bottom-32 left-1/2">
             <button type="button" @click="currentSlide = 1"
                 :class="{ 'bg-cyan-300': currentSlide === 1, 'bg-white': currentSlide !== 1 }"
-                class="w-2.5 h-2.5 border-2 rounded-full lg:border-none" aria-current="true"
-                aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                class="w-2.5 h-2.5 border-2 rounded-full lg:border-none" aria-current="true" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
             <button type="button" @click="currentSlide = 2"
                 :class="{ 'bg-cyan-300': currentSlide === 2, 'bg-white': currentSlide !== 2 }"
-                class="w-2.5 h-2.5 border-2 rounded-full lg:border-none" aria-current="false"
-                aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                class="w-2.5 h-2.5 border-2 rounded-full lg:border-none" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
         </div>
 
         <div

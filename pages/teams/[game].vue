@@ -22,9 +22,16 @@ const line = useInfosStore().chooseTeam(route.params.game)[0]
                 <div>
                     <p class="text-4xl lg:text-4xl uppercase font-bold mb-4 text-cyan-300">{{ line.game }}</p>
 
-                    <div class="grid grid-cols-2 lg:flex gap-5">
-                        <div v-for="player in line.players" :key="player.name">
-                            <img :src="player.image" class="h-80 w-56 object-cover rounded-md" lt="">
+                    <div class="grid grid-cols-2 lg:flex gap-5 lg:overflow-x-auto">
+                        <div v-for="player in line.players" :key="player.name"
+                            class="group cursor-pointer flex-shrink-0">
+                            <div class="relative">
+                                <img :src="player.image" class="h-80 w-48 object-cover rounded-md" :alt="player.nick">
+
+                                <div
+                                    class="absolute bottom-0 w-48 h-80 rounded-md opacity-0 group-hover:opacity-100 bg-gradient-to-b from-transparent via-transparent to-cyan-300 transition-all duration-500">
+                                </div>
+                            </div>
                             <p class="font-bold uppercase">{{ player.nick }}</p>
                             <p class="text-secondary uppercase">{{ player.name }}</p>
                         </div>
