@@ -12,11 +12,15 @@ const line = useInfosStore().chooseTeam(route.params.game)[0]
     <NuxtLayout>
         <Title>{{ line.game }} - Stellae</Title>
 
-        <div class="min-h-screen py-28 px-6 bg-teams text-white">
+        <div :class="{ 'bg-valorant': route.params.game == 'valorant', 'bg-r6': route.params.game == 'r6siege' }"
+            class="min-h-screen py-28 px-6 text-white">
             <div>
                 <div class="flex gap-10 pb-8 lg:pb-14 overflow-x-auto hide-scrollbar">
                     <p v-for="team in teams" :class="{ 'text-cyan-300': route.params.game == team.link }"
-                        class="font-bold uppercase flex-shrink-0">{{ team.name }}</p>
+                        class="font-bold uppercase flex-shrink-0 hover:text-cyan-300">
+                        <NuxtLink :to="`/teams/` + team.link">{{ team.name }}
+                        </NuxtLink>
+                    </p>
                 </div>
 
                 <div>
@@ -51,11 +55,19 @@ const line = useInfosStore().chooseTeam(route.params.game)[0]
 </template>
 
 <style scoped>
-.bg-teams {
+.bg-valorant {
     background-size: cover;
     background-position: center;
     width: 100%;
-    background-image: linear-gradient(#000000d3, #000000bb), url('https://43417145.fs1.hubspotusercontent-na1.net/hub/43417145/hubfs/IMG_4278_(1).jpg?width=1200&length=1200&name=IMG_4278_(1).jpg');
+    background-image: linear-gradient(#000000d3, #000000bb), url('https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltc655d62fc92e4acd/649bdd9094be10f2698941ed/071123_Val_EP7_China_CG_Banner.jpg?auto=webp&disable=upscale&height=549');
+    background-repeat: no-repeat;
+}
+
+.bg-r6 {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-image: linear-gradient(#000000d3, #000000bb), url('https://s2-ge.glbimg.com/Mn4MpbfOftUzZYusjMjY6ucisp4=/0x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/b/d/MsAo0RQq25hzLuK95lew/r6-thumb.jpg');
     background-repeat: no-repeat;
 }
 </style>

@@ -24,9 +24,6 @@ const getVideos = () => {
         })
         .then(response => {
             videos.value = response.data.items;
-            getLastVideo(videos.value[0].id.videoId)
-
-            console.log(videos.value);
         })
         .catch(error => {
             console.error('Erro ao obter vídeos do YouTube:', error);

@@ -87,9 +87,11 @@ onBeforeUnmount(() => {
             </div>
         </div>
 
-        <div v-show="teamsMenu" @mouseover="teamsMenu = true" @mouseleave="teamsMenu = false">
-            <TeamsMenu />
-        </div>
+        <Transition>
+            <div v-show="teamsMenu" @mouseover="teamsMenu = true" @mouseleave="teamsMenu = false">
+                <TeamsMenu />
+            </div>
+        </Transition>
     </nav>
 </template>
 
@@ -153,5 +155,15 @@ onBeforeUnmount(() => {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
 }
 </style>
