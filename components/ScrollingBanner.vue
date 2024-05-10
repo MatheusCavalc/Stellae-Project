@@ -2,31 +2,31 @@
     <div class="overflow-x-hidden py-5 bg-cyan-300">
         <div id="scroll-text">
             <div class="flex gap-10">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
                 <img src="../assets/images/logo-stellae.png" class="h-8 w-12">
-                <p class="text-nowrap mt-0.5">#BeStellae</p>
+                <p class="text-nowrap mt-0.5"><span class="text-secondary">#</span>BeStellae</p>
             </div>
             <div>
             </div>
