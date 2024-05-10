@@ -39,7 +39,7 @@ export const useInfosStore = defineStore('infos', () => {
                 {
                     name: "Matheus da Silva Fontella",
                     nick: "shelbyN",
-                    image: "https://pbs.twimg.com/media/GK9hEZbWEAIi0yP?format=jpg&name=large"
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk78v9jWmhUvFMBl_S7tOeVdlVDX1TpzkWS9Xw30CQGQ&s"
                 }
             ],
             sponsor: [

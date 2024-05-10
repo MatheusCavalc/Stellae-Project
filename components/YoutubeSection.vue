@@ -47,7 +47,7 @@ onMounted(() => {
 
 <template>
     <section class="py-8">
-        <p class="text-2xl lg:text-3xl px-5 lg:px-6 font-bold italic lg:not-italic">Conheca a Stellae Gaming</p>
+        <p class="text-2xl lg:text-3xl px-5 lg:px-6 font-bold italic lg:not-italic">Acompanhe a Stellae Gaming</p>
 
         <div class="mt-8">
             <ul class="flex lg:grid grid-cols-3 gap-3 lg:gap-6 px-4 lg:px-6 w-full overflow-x-auto overflow-y-hidden hide-scrollbar">

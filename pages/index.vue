@@ -23,7 +23,7 @@ const sponsors = useInfosStore().sponsors
                     <a :href="product.link" target="_blank">
                         <img :src="product.image" class="h-80 lg:w-full object-cover" alt="" srcset="">
                         <p class="font-bold uppercase">{{ product.name }}</p>
-                        <p class="font-bold uppercase">R${{ product.price }}</p>
+                        <p class="font-bold uppercase">RS{{ product.price }}</p>
                     </a>
                 </div>
             </div>

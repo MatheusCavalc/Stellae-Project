@@ -43,7 +43,7 @@ onMounted(() => {
 
                         <div class="">
                             <p class="text-3xl mx-5 lg:mx-0 text-cyan-300 italic lg:font-bold md:text-6xl text-center">
-                                #BeStellae
+                                <span class="text-secondary">#</span>BeStellae
                             </p>
                             <LinksHome />
                         </div>
