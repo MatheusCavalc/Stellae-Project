@@ -1,5 +1,4 @@
 <script setup>
-import MenuIcon from '@/components/Icons/MenuIcon.vue';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const menu = ref(false)
@@ -42,7 +41,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <nav :class="{ 'border-b border-b-black bg-black': isNavbarOpaque, 'lg:-translate-y-full lg:ease-in': isHidden, 'lg:-translate-y-0 lg:ease-out': !isHidden }"
+    <nav :class="{ 'border-b border-b-black bg-black': isNavbarOpaque, '-translate-y-full ease-in': isHidden, '-translate-y-0 ease-out': !isHidden }"
         class="fixed top-0 z-30 w-full transition duration-700 ease-in-out">
         <div class="flex flex-wrap items-center justify-between max-w-screen-2xl px-1 lg:px-4 py-3 lg:py-0 mx-auto">
             <NuxtLink to="/"
@@ -58,7 +57,7 @@ onBeforeUnmount(() => {
                 <button @click="closeMenus"
                     :class="{ 'line-color-black': isNavbarOpaque, 'line-color-white': !isNavbarOpaque, 'opened': menu }"
                     class="inline-flex items-center justify-center w-10 h-10 p-1 text-sm rounded-lg lg:hidden transition duration-700 ease-in-out">
-                    <MenuIcon />
+                    <IconsMenuIcon />
                 </button>
             </div>
             <div :class="{ 'lg:block': menu, 'hidden lg:block': !menu }" class="w-full lg:w-auto lg:order-1"

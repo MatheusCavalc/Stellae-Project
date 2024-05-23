@@ -13,6 +13,7 @@ const sponsors = useInfosStore().sponsors
 
         <ScrollingBanner />
 
+        <!-- Products -->
         <div class="px-4 py-10">
             <p class="text-left lg:text-center text-3xl italic lg:not-italic uppercase lg:text-4xl font-extrabold mb-8">
                 Nossos produtos
@@ -29,6 +30,7 @@ const sponsors = useInfosStore().sponsors
             </div>
         </div>
 
+        <!-- Sponsors -->
         <div class="py-10 px-6 bg-gradient-to-r from-cyan-300 via-cyan-300 to-white">
             <div class="flex justify-center gap-2 lg:gap-14">
                 <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link" target="_blank">
